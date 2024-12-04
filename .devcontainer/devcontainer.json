@@ -4,7 +4,7 @@
         "../docker-compose.yml",
         "docker-compose.yml"
     ],
-    "service": "presentation-platformdocker-",
+    "service": "presentation-platform",
     "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
     "features": {
         "ghcr.io/devcontainers/features/github-cli:1": {}
