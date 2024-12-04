@@ -1,1 +1,5 @@
-ipynb
+ipykernel
+numpy
+openai
+pandas
+scikit-learn

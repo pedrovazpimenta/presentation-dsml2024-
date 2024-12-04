@@ -163,4 +163,3 @@ cython_debug/
 
 # pre-test files
 MyTest
-*.ipynb
