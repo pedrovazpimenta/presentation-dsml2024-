@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+
+  presentation-platform:
+    build:
+      context: ./bench
+      dockerfile: Dockerfile
+    image: presentation-platform
+    container_name: presentation-platform
+    restart: always
+    volumes:
+      - type: bind
+        source: ./bench
+        target: /bench
