@@ -163,3 +163,4 @@ cython_debug/
 
 # pre-test files
 MyTest
+*.pkl
