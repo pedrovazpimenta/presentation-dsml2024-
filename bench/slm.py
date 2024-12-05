@@ -3,8 +3,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import Dataset
 import math
-import random
-import numpy as np
 
 
 class DecoderBlock(nn.Module):
@@ -97,8 +95,8 @@ class ExpressionDataset(Dataset):
 
     def __getitem__(self, idx):
         expression = self.corpus[idx]
-        input_sequence = expression[:-1]  # all but the last token
-        target_sequence = expression[1:]  # all but the first token
+        input_sequence = expression[:-1]
+        target_sequence = expression[1:]
 
         input_indices = torch.tensor(
             [self.tokens.index(char) for char in input_sequence]
@@ -122,7 +120,6 @@ num_layers = 3
 context_length = 24
 batch_size = 1
 
-# Initialize the model with `num_layer` layers
 model = TransformerDecoder(
     vocab_size, d_model, num_heads, ff_hidden_layer, dropout
 )
