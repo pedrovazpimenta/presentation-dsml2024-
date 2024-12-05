@@ -109,17 +109,3 @@ class ExpressionDataset(Dataset):
 
 def count_parameters(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
-
-
-vocab_size = 4
-d_model = 24
-num_heads = 4
-ff_hidden_layer = 8 * d_model
-dropout = 0.1
-num_layers = 3
-context_length = 24
-batch_size = 1
-
-model = TransformerDecoder(
-    vocab_size, d_model, num_heads, ff_hidden_layer, dropout
-)
